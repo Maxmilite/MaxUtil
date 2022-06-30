@@ -21,8 +21,6 @@ public class MULoaderMixin {
             if (MaxUtilClient.manager.getModule("NightVision").isToggle() &&
                     MaxUtilClient.manager.getModule("NightVision").mode.equals("GAMMA"))
                 this.options.getGamma().setValue(15.0);
-        else if (!MaxUtilClient.manager.getModule("NightVision").isToggle())
-            this.options.getGamma().setValue(1.0);
     }
 
 }

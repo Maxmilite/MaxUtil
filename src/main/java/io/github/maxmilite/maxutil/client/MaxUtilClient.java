@@ -44,6 +44,8 @@ public class MaxUtilClient implements ClientModInitializer {
         binding = new Binding();
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (!(MaxUtilClient.manager.getModule("NightVision").isToggle() && MaxUtilClient.manager.getModule("NightVision").mode.equals("GAMMA")))
+                mc.options.getGamma().setValue(0.5);
             KeyEvent.keyPress();
         });
 

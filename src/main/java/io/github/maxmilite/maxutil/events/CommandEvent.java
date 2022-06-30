@@ -36,9 +36,11 @@ public class CommandEvent {
                             if (args[4].matches(DIGIT_REGEX))
                                 module.jsonObject.addProperty(args[3], Integer.valueOf(args[4]));
                             else if (args[4].matches(DECIMAL_REGEX))
-                                module.jsonObject.addProperty(args[3], Integer.valueOf(args[4]));
-                            else
+                                module.jsonObject.addProperty(args[3], Double.valueOf(args[4]));
+                            else {
+                                args[4] = args[4].toUpperCase();
                                 module.jsonObject.addProperty(args[3], args[4].toUpperCase());
+                            }
                             module.readJsonObject();
                             MaxUtilClient.config.writeConfig();
                             MessageEvent.sendInfo("Succeed in setting the §b" + args[3] + "§e value of §b" + MaxUtilClient.manager.getModule(args[2]).getName() + "§e to §b" + args[4]);
