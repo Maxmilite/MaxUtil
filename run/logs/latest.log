@@ -108,3 +108,44 @@ java.io.IOException: Could not retrieve profile key pair
 [21:08:19] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
 [21:08:19] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
 [21:08:19] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[21:11:11] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[21:11:11] [Render thread/INFO] (Minecraft) Loaded 1179 advancements
+[21:11:12] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 63 new biomes in 3.134 ms
+[21:11:12] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.19
+[21:11:12] [Server thread/INFO] (Minecraft) Generating keypair
+[21:11:13] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[21:11:16] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[21:11:16] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[21:11:16] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[21:11:16] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[21:11:16] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[21:11:16] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[21:11:16] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[21:11:16] [Render thread/INFO] (Minecraft) Preparing spawn area: 3%
+[21:11:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 33%
+[21:11:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 83%
+[21:11:17] [Render thread/INFO] (Minecraft) Time elapsed: 4695 ms
+[21:11:18] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
+[21:11:18] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[21:11:19] [Server thread/INFO] (Minecraft) Player9[local:E:3681d0d8] logged in with entity id 35 at (138.81401918823337, 88.0, -184.14836127839658)
+[21:11:19] [Server thread/INFO] (Minecraft) Player9 joined the game
+[21:11:22] [Render thread/INFO] (Minecraft) Loaded 44 advancements
+[21:11:26] [Render thread/INFO] (Minecraft) Loaded 45 advancements
+[21:11:42] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[21:11:42] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[21:11:42] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[21:11:42] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[21:11:43] [Server thread/INFO] (Minecraft) Player9 lost connection: Disconnected
+[21:11:43] [Server thread/INFO] (Minecraft) Player9 left the game
+[21:11:43] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[21:11:43] [Server thread/INFO] (Minecraft) Stopping server
+[21:11:43] [Server thread/INFO] (Minecraft) Saving players
+[21:11:43] [Server thread/INFO] (Minecraft) Saving worlds
+[21:11:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[21:11:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[21:11:45] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[21:11:45] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (New World): All chunks are saved
+[21:11:45] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[21:11:45] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[21:11:45] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+[21:11:45] [Render thread/INFO] (Minecraft) Stopping!
