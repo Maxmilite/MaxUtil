@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "maxutil",
+  "version": "${version}",
+  "name": "MaxUtil",
+  "description": "A utility mod on fabric.",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/maxutil/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.maxmilite.maxutil.client.MaxUtilClient"
+    ],
+    "main": [
+      "io.github.maxmilite.maxutil.MaxUtil"
+    ]
+  },
+  "mixins": [
+    "maxutil.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "1.19"
+  }
+}

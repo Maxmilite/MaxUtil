@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.maxmilite.maxutil.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "MUInGameHudMixin",
+    "MUInGameOverlayMixin",
+    "MUInteractionMixin",
+    "MULoaderMixin",
+    "MUPlayerEntityMixin",
+    "MUSimpleOptionMixin",
+    "MUTitleScreenMixin",
+    "MUWindowTitleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

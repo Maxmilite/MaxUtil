@@ -1,0 +1,48 @@
+{
+  "mappings": {
+    "io/github/maxmilite/maxutil/mixin/MULoaderMixin": {
+      "tick": "Lnet/minecraft/class_310;method_1574()V"
+    },
+    "io/github/maxmilite/maxutil/mixin/MUWindowTitleMixin": {
+      "setTitle": "Lnet/minecraft/class_1041;method_24286(Ljava/lang/String;)V"
+    },
+    "io/github/maxmilite/maxutil/mixin/MUPlayerEntityMixin": {
+      "sendChatMessage(Ljava/lang/String;Lnet/minecraft/text/Text;)V": "Lnet/minecraft/class_746;method_44096(Ljava/lang/String;Lnet/minecraft/class_2561;)V",
+      "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingItem()Z": "Lnet/minecraft/class_746;method_6115()Z",
+      "tickMovement": "Lnet/minecraft/class_746;method_6007()V",
+      "tick": "Lnet/minecraft/class_746;method_5773()V"
+    },
+    "io/github/maxmilite/maxutil/mixin/MUInGameHudMixin": {
+      "Lnet/minecraft/client/gui/hud/InGameHud;renderOverlay(Lnet/minecraft/util/Identifier;F)V": "Lnet/minecraft/class_329;method_31977(Lnet/minecraft/class_2960;F)V",
+      "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_4587;F)V",
+      "renderScoreboardSidebar": "Lnet/minecraft/class_329;method_1757(Lnet/minecraft/class_4587;Lnet/minecraft/class_266;)V"
+    },
+    "io/github/maxmilite/maxutil/mixin/MUTitleScreenMixin": {
+      "init": "Lnet/minecraft/class_442;method_25426()V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "io/github/maxmilite/maxutil/mixin/MULoaderMixin": {
+        "tick": "Lnet/minecraft/class_310;method_1574()V"
+      },
+      "io/github/maxmilite/maxutil/mixin/MUWindowTitleMixin": {
+        "setTitle": "Lnet/minecraft/class_1041;method_24286(Ljava/lang/String;)V"
+      },
+      "io/github/maxmilite/maxutil/mixin/MUPlayerEntityMixin": {
+        "sendChatMessage(Ljava/lang/String;Lnet/minecraft/text/Text;)V": "Lnet/minecraft/class_746;method_44096(Ljava/lang/String;Lnet/minecraft/class_2561;)V",
+        "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingItem()Z": "Lnet/minecraft/class_746;method_6115()Z",
+        "tickMovement": "Lnet/minecraft/class_746;method_6007()V",
+        "tick": "Lnet/minecraft/class_746;method_5773()V"
+      },
+      "io/github/maxmilite/maxutil/mixin/MUInGameHudMixin": {
+        "Lnet/minecraft/client/gui/hud/InGameHud;renderOverlay(Lnet/minecraft/util/Identifier;F)V": "Lnet/minecraft/class_329;method_31977(Lnet/minecraft/class_2960;F)V",
+        "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_4587;F)V",
+        "renderScoreboardSidebar": "Lnet/minecraft/class_329;method_1757(Lnet/minecraft/class_4587;Lnet/minecraft/class_266;)V"
+      },
+      "io/github/maxmilite/maxutil/mixin/MUTitleScreenMixin": {
+        "init": "Lnet/minecraft/class_442;method_25426()V"
+      }
+    }
+  }
+}

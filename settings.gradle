@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+//        maven {
+//            name = 'Fastjson'
+//            url = 'http://repo1.maven.org/maven2/com/alibaba/fastjson/'
+//        }
+        gradlePluginPortal()
+    }
+}
