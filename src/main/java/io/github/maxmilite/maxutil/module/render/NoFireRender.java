@@ -18,7 +18,7 @@ public class NoFireRender extends Module {
         jsonObject.addProperty("key", key);
     }
     @Override
-    public void readJsonObject() {
+    public void readJsonObject() throws NullPointerException {
         this.toggle = jsonObject.get("toggle").getAsBoolean();
         this.alpha = jsonObject.get("alpha").getAsFloat();
         this.key = jsonObject.get("key").getAsInt();

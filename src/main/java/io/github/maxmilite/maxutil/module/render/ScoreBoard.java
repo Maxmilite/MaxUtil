@@ -22,7 +22,7 @@ public class ScoreBoard extends Module {
         jsonObject.addProperty("key", key);
     }
     @Override
-    public void readJsonObject() {
+    public void readJsonObject() throws NullPointerException {
         this.toggle = jsonObject.get("toggle").getAsBoolean();
         this.bgAlpha = jsonObject.get("bgalpha").getAsDouble();
         this.titleAlpha = jsonObject.get("titlealpha").getAsDouble();

@@ -21,7 +21,7 @@ public class NightVision extends Module {
         jsonObject.addProperty("key", key);
     }
     @Override
-    public void readJsonObject() {
+    public void readJsonObject() throws NullPointerException {
         this.toggle = jsonObject.get("toggle").getAsBoolean();
         this.mode = jsonObject.get("mode").getAsString();
         this.key = jsonObject.get("key").getAsInt();

@@ -87,7 +87,11 @@ public class ConfigManager {
             if (i.jsonObject == null) {
                 i.insertElement();
             } else {
-                i.readJsonObject();
+                try {
+                    i.readJsonObject();
+                } catch (NullPointerException e) {
+                    i.insertElement();
+                }
             }
         }
 

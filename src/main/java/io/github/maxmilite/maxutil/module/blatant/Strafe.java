@@ -40,7 +40,7 @@ public class Strafe extends Module {
     }
 
     @Override
-    public void readJsonObject() {
+    public void readJsonObject() throws NullPointerException {
         this.toggle = jsonObject.get("toggle").getAsBoolean();
         this.amplifier = jsonObject.get("amplifier").getAsFloat();
         this.autoJump = jsonObject.get("autojump").getAsBoolean();

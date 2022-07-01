@@ -5,14 +5,19 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "MUC2SPacketMixin",
+    "MUEntityVelocityUpdateS2CPacketMixin",
     "MUPlayerMoveC2SPacketMixin"
   ],
   "client": [
+    "MUGameRendererMixin",
     "MUInGameHudMixin",
     "MUInGameOverlayMixin",
     "MUInteractionMixin",
+    "MULoaderInterfaceMixin",
     "MULoaderMixin",
     "MUPlayerEntityMixin",
+    "MURenderTickCounterMixin",
+    "MUS2CPacketMixin",
     "MUSimpleOptionMixin",
     "MUTitleScreenMixin",
     "MUWindowTitleMixin"

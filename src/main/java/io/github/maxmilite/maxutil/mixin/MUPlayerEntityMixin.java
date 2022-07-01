@@ -140,7 +140,7 @@ public abstract class MUPlayerEntityMixin extends AbstractClientPlayerEntity {
                 this.setVelocity(velx, this.getVelocity().getY(), vely);
             }
         if (MaxUtilClient.manager.getModule("SkyFloat").isToggle()) {
-            if (!this.isRiding() && !this.isSneaking()) {
+            if (!this.isRiding()) {
 
                 SkyFloat skyFloat = (SkyFloat) MaxUtilClient.manager.getModule("SkyFloat");
 

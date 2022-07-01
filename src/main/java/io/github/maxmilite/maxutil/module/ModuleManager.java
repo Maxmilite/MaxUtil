@@ -1,6 +1,8 @@
 package io.github.maxmilite.maxutil.module;
 
 import io.github.maxmilite.maxutil.module.blatant.*;
+import io.github.maxmilite.maxutil.module.misc.Derp;
+import io.github.maxmilite.maxutil.module.misc.Timer;
 import io.github.maxmilite.maxutil.module.movement.Sprint;
 import io.github.maxmilite.maxutil.module.player.NightVision;
 import io.github.maxmilite.maxutil.module.render.*;
@@ -48,11 +50,18 @@ public class ModuleManager {
         modules.add(new NoSlow());
         modules.add(new Strafe());
         modules.add(new SkyFloat());
+        modules.add(new Launch());
 
         // Player
         modules.add(new NightVision());
         modules.add(new Reach());
         modules.add(new NoFall());
+        modules.add(new Velocity());
+        modules.add(new FastUse());
+
+        // Misc
+        modules.add(new Timer());
+        modules.add(new Derp());
     }
 
 }

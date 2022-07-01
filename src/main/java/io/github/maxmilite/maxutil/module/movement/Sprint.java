@@ -32,7 +32,7 @@ public class Sprint extends Module {
         jsonObject.addProperty("key", key);
     }
     @Override
-    public void readJsonObject() {
+    public void readJsonObject() throws NullPointerException {
         this.toggle = jsonObject.get("toggle").getAsBoolean();
         this.allDirections = jsonObject.get("alldirections").getAsBoolean();
         this.key = jsonObject.get("key").getAsInt();

@@ -28,7 +28,7 @@ public class Reach extends Module {
     }
 
     @Override
-    public void readJsonObject() {
+    public void readJsonObject() throws NullPointerException {
         this.toggle = jsonObject.get("toggle").getAsBoolean();
         this.reach = jsonObject.get("reach").getAsFloat();
         this.key = jsonObject.get("key").getAsInt();

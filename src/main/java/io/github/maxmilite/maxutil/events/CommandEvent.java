@@ -3,14 +3,19 @@ package io.github.maxmilite.maxutil.events;
 import io.github.maxmilite.maxutil.client.MaxUtilClient;
 import io.github.maxmilite.maxutil.module.Module;
 import io.github.maxmilite.maxutil.util.KeyUtil;
+import io.github.maxmilite.maxutil.util.MathUtil;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
+import net.minecraft.util.math.Vec2f;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.Objects;
+
 public class CommandEvent {
 
-    public static String DECIMAL_REGEX = "^[0-9.]+";
-    public static String DIGIT_REGEX = "^[0-9]+";
+    public static String DECIMAL_REGEX = "^[-0-9.]+";
+    public static String DIGIT_REGEX = "^[-0-9]+";
 
     public static void onCommand(String message, @Nullable Text ignoredPreview, CallbackInfo info) {
 
@@ -33,6 +38,7 @@ public class CommandEvent {
                         args[3] = args[3].toLowerCase();
                         if (MaxUtilClient.manager.getModule(args[2]) != null) {
                             Module module = MaxUtilClient.manager.getModule(args[2]);
+                            module.insertElement();
                             if (args[4].matches(DIGIT_REGEX))
                                 module.jsonObject.addProperty(args[3], Integer.valueOf(args[4]));
                             else if (args[4].matches(DECIMAL_REGEX))
@@ -90,6 +96,36 @@ public class CommandEvent {
                 case "reload":
                     MaxUtilClient.config.readConfig();
                     MessageEvent.sendInfo("Config reloaded.");
+                    break;
+
+                case "vclip":
+                    if (args.length != 3)
+                        MessageEvent.sendError("Invalid command.");
+                    else {
+                        if (!args[2].matches(DECIMAL_REGEX))
+                            MessageEvent.sendError("Invalid command.");
+                        else {
+                            MinecraftClient mc = MinecraftClient.getInstance();
+                            Objects.requireNonNull(mc.player).setPosition(mc.player.getPos().add(0, Double.parseDouble(args[2]), 0));
+                            MessageEvent.sendInfo("VClip operation succeeded.");
+                        }
+                    }
+                    break;
+
+                case "hclip":
+                    if (args.length != 3)
+                        MessageEvent.sendError("Invalid command.");
+                    else {
+                        if (!args[2].matches(DECIMAL_REGEX))
+                            MessageEvent.sendError("Invalid command.");
+                        else {
+                            double dist = Double.parseDouble(args[2]);
+                            Vec2f vec2f = MathUtil.calcVector(dist);
+                            MinecraftClient mc = MinecraftClient.getInstance();
+                            Objects.requireNonNull(mc.player).setPosition(mc.player.getPos().add(vec2f.x, 0, vec2f.y));
+                            MessageEvent.sendInfo("HClip operation succeeded.");
+                        }
+                    }
                     break;
 
                 default:
