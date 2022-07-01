@@ -3,6 +3,7 @@ package io.github.maxmilite.maxutil.mixin;
 import com.mojang.authlib.GameProfile;
 import io.github.maxmilite.maxutil.client.MaxUtilClient;
 import io.github.maxmilite.maxutil.events.CommandEvent;
+import io.github.maxmilite.maxutil.module.blatant.SkyFloat;
 import io.github.maxmilite.maxutil.module.blatant.Strafe;
 import io.github.maxmilite.maxutil.module.movement.Sprint;
 import net.minecraft.client.MinecraftClient;
@@ -72,7 +73,7 @@ public abstract class MUPlayerEntityMixin extends AbstractClientPlayerEntity {
         return defaultSpeed;
     }
 
-    private Vec2f transformStrafe(double speed) {
+    public Vec2f transformStrafe(double speed) {
         assert mc.player != null;
         float forward = mc.player.input.movementForward;
         float side = mc.player.input.movementSideways;
@@ -124,10 +125,9 @@ public abstract class MUPlayerEntityMixin extends AbstractClientPlayerEntity {
     }
 
     @Inject(method = "tickMovement", at = @At("TAIL"))
-    public void strafe(CallbackInfo info) {
-        if (MaxUtilClient.manager.getModule("Strafe").isToggle())
+    public void movement(CallbackInfo info) {
+        if (MaxUtilClient.manager.getModule("Strafe").isToggle() && !MaxUtilClient.manager.getModule("SkyFloat").isToggle())
             if (this.hasMovementInput() && !this.isRiding() && !this.isSneaking()) {
-
                 Strafe strafe = (Strafe) MaxUtilClient.manager.getModule("Strafe");
 
                 if (strafe.isAutoJump() && this.isOnGround())
@@ -135,10 +135,30 @@ public abstract class MUPlayerEntityMixin extends AbstractClientPlayerEntity {
 
                 float amplifier = strafe.getAmplifier();
 
-                float velx = Max((float) this.getVelocity().getX(), transformStrafe(getDefaultSpeed()).x * amplifier);
-                float vely = Max((float) this.getVelocity().getZ(), transformStrafe(getDefaultSpeed()).y * amplifier);
+                float velx = transformStrafe(getDefaultSpeed()).x * amplifier;
+                float vely = transformStrafe(getDefaultSpeed()).y * amplifier;
                 this.setVelocity(velx, this.getVelocity().getY(), vely);
             }
+        if (MaxUtilClient.manager.getModule("SkyFloat").isToggle()) {
+            if (!this.isRiding() && !this.isSneaking()) {
+
+                SkyFloat skyFloat = (SkyFloat) MaxUtilClient.manager.getModule("SkyFloat");
+
+                double speed = skyFloat.speed;
+                float verticalBase = (float) skyFloat.vertical;
+
+                float verticalSpeed = 0.0F;
+
+                if (this.input.sneaking)
+                    verticalSpeed -= verticalBase;
+                if (this.input.jumping)
+                    verticalSpeed += verticalBase;
+
+                float velx = transformStrafe((float) speed).x;
+                float vely = transformStrafe((float) speed).y;
+                this.setVelocity(velx, verticalSpeed, vely);
+            }
+        }
     }
 
     @Inject(method = "tick", at = @At("TAIL"))

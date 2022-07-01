@@ -84,8 +84,14 @@ public class ConfigManager {
         for (var i : MaxUtilClient.manager.getModules()) {
             JsonObject jsonObject = gson.fromJson(objectList.get(i.getName()), JsonObject.class);
             i.jsonObject = jsonObject;
-            i.readJsonObject();
+            if (i.jsonObject == null) {
+                i.insertElement();
+            } else {
+                i.readJsonObject();
+            }
         }
+
+        writeConfig();
 
     }
 

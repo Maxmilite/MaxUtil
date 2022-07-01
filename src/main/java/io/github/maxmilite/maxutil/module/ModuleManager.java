@@ -1,10 +1,8 @@
 package io.github.maxmilite.maxutil.module;
 
-import io.github.maxmilite.maxutil.module.blatant.NoSlow;
+import io.github.maxmilite.maxutil.module.blatant.*;
 import io.github.maxmilite.maxutil.module.movement.Sprint;
-import io.github.maxmilite.maxutil.module.blatant.Strafe;
 import io.github.maxmilite.maxutil.module.player.NightVision;
-import io.github.maxmilite.maxutil.module.blatant.Reach;
 import io.github.maxmilite.maxutil.module.render.*;
 
 import java.util.ArrayList;
@@ -49,10 +47,12 @@ public class ModuleManager {
         modules.add(new Sprint());
         modules.add(new NoSlow());
         modules.add(new Strafe());
+        modules.add(new SkyFloat());
 
         // Player
         modules.add(new NightVision());
         modules.add(new Reach());
+        modules.add(new NoFall());
     }
 
 }
