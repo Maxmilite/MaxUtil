@@ -57,7 +57,7 @@ public class ActiveMods extends Module {
             base += 24;
 
         for (var i : names) {
-            int len = mc.textRenderer.getWidth(i);
+            float len = mc.textRenderer.getWidth(i);
             mc.textRenderer.draw(matrices, Text.literal(i).setStyle(moduleStyle), width - len, base + 11 * cnt++, -1);
         }
     }

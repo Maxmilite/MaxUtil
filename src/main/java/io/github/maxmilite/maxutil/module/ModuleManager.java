@@ -44,6 +44,7 @@ public class ModuleManager {
         modules.add(new ScoreBoard());
         modules.add(new NoScoreboard());
         modules.add(new ActiveMods());
+        modules.add(new HitEffect());
 
         // Movement
         modules.add(new Sprint());
@@ -58,6 +59,8 @@ public class ModuleManager {
         modules.add(new NoFall());
         modules.add(new Velocity());
         modules.add(new FastUse());
+        modules.add(new KillAura());
+        modules.add(new Scaffold());
 
         // Misc
         modules.add(new Timer());

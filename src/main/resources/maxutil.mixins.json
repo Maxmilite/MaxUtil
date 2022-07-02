@@ -4,6 +4,7 @@
   "package": "io.github.maxmilite.maxutil.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "MUBlockMixin",
     "MUC2SPacketMixin",
     "MUEntityVelocityUpdateS2CPacketMixin",
     "MUPlayerMoveC2SPacketMixin"

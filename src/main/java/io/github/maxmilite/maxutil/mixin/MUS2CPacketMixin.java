@@ -33,7 +33,9 @@ public class MUS2CPacketMixin {
 
     @Inject(method = "onEntitySetHeadYaw", at = @At("HEAD"), cancellable = true)
     public void derp(CallbackInfo info) {
-        if (MaxUtilClient.manager.getModule("Derp").isToggle())
-            info.cancel();
+//        if (MaxUtilClient.manager.getModule("Derp").isToggle()
+//            || MaxUtilClient.manager.getModule("KillAura").isToggle())
+//            info.cancel();
     }
+
 }

@@ -4,6 +4,7 @@ import io.github.maxmilite.maxutil.client.MaxUtilClient;
 import io.github.maxmilite.maxutil.module.Module;
 import io.github.maxmilite.maxutil.util.KeyUtil;
 import io.github.maxmilite.maxutil.util.MathUtil;
+import io.github.maxmilite.maxutil.util.PlayerUtil;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.Vec2f;
@@ -126,6 +127,11 @@ public class CommandEvent {
                             MessageEvent.sendInfo("HClip operation succeeded.");
                         }
                     }
+                    break;
+
+                case "getnbt":
+                    MessageEvent.sendInfo("NBT will be send to chat box and be copied to clipboard.");
+                    PlayerUtil.getBlockNBT();
                     break;
 
                 default:
